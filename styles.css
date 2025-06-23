@@ -90,6 +90,16 @@ button {
 .g-heading {
     margin-top: 40px;
 }
+.g-title {
+    font-family: 'Noto Serif', Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.375rem;
+    line-height: 1.2;
+    margin-bottom: 1.75rem;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    text-rendering: optimizeLegibility;
+}
+
 
 @media (max-width: 600px) {
     .g-text, .g-caption-text {
@@ -108,18 +118,16 @@ button {
     .g-heading {
         margin-top: 15px;
     }
+    .g-title {
+        font-size: 1.8rem;
+    }
+    .g-caption-text {
+        font-size: 0.6rem;
+    }
 }
 
 
-.g-title {
-    font-family: 'Noto Serif', Georgia, 'Times New Roman', Times, serif;
-    font-size: 2.375rem;
-    line-height: 1.2;
-    margin-bottom: 1.75rem;
-    font-weight: 800;
-    letter-spacing: -0.05em;
-    text-rendering: optimizeLegibility;
-}
+
 .g-heading-button-container {
     display: flex;
     justify-content: left;
