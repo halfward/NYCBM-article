@@ -1,6 +1,13 @@
 html, body {
     margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
 }
+button {
+    color: black !important;
+}
+
 .nav-container {
     position: fixed;
     display: flex;
@@ -83,7 +90,6 @@ html, body {
     margin-bottom: 25px;
     position: relative;
 }
-
 .g-heading {
     margin-top: 40px;
 }
@@ -151,13 +157,14 @@ html, body {
 .g-heading-bio-container {
     margin-bottom: 20px;
     font-family: Arial, sans-serif;
+    color: rgb(81, 81, 81);
 }
 .g-heading-bio-author {
     font-size: 0.9rem;
     font-weight: 500;
 }
 .g-heading-bio-author a {
-    color: black !important;
+    color: rgb(81, 81, 81) !important;
 }
 .g-heading-bio-text, .g-heading-bio-date {
     font-size: 0.9rem;
@@ -238,7 +245,6 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: white;
   }
   
   .scrollytelling-image {
@@ -254,13 +260,13 @@ a {
 
   .scrollytelling-image-full {
     width: 100%;
+    max-height: 100vh;
   }
-  
+
   .scrollytelling-image.active {
     opacity: 1;
     z-index: 1;
   }
-  
   
   .scrollytelling-step {
     padding: 50vh 2rem 50vh 2rem; /* Makes each step tall enough to scroll */
@@ -285,6 +291,7 @@ a {
     line-height: 1.5;
     margin-bottom: 12.5px;
   }
+  
   @media (max-width: 600px) {
     .scrollytelling-image {
         width: 85%;
