@@ -4,7 +4,7 @@ html, body {
     width: 100vw;
 }
 button {
-    color: black;
+    color: black !important;
 }
 
 .nav-container {
@@ -95,12 +95,13 @@ button {
 
 @media (max-width: 600px) {
     .g-text, .g-caption-text {
-        width: 90%;
-        padding: 0 25px;
+        width: 85vw;
+        font-size: 1rem;
+        line-height: 1.25;
     }
     .g-image {
-        width: 90%;
-        padding: 0 25px;
+        width: 85vw;
+        padding: 0 30px;
         object-fit: contain;
     }
     .image-splash {
