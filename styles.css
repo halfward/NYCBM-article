@@ -97,7 +97,7 @@ button {
 @media (max-width: 600px) {
     .g-text, .g-caption-text {
         width: 85vw;
-        font-size: 1rem;
+        /* font-size: 1rem; */
         line-height: 1.25;
     }
     .g-image {
