@@ -1,5 +1,6 @@
 html, body {
     margin: 0;
+    padding: 0;
 }
 .nav-container {
     position: fixed;
@@ -83,18 +84,29 @@ html, body {
     margin-bottom: 25px;
     position: relative;
 }
-
-@media (max-width: 740px) {
-    .g-text {
-        max-width: 100%;
-        margin-left: 25px;
-        margin-right: 25px;
-    }
-}
-
 .g-heading {
     margin-top: 40px;
 }
+
+@media (max-width: 600px) {
+    .g-text, .g-caption-text {
+        width: 90%;
+        padding: 0 25px;
+    }
+    .g-image {
+        width: 90%;
+        padding: 0 25px;
+        object-fit: contain;
+    }
+    .image-splash {
+        height: 300px;
+    }
+    .g-heading {
+        margin-top: 20px;
+    }
+}
+
+
 .g-title {
     font-family: 'Noto Serif', Georgia, 'Times New Roman', Times, serif;
     font-size: 2.375rem;
@@ -138,13 +150,14 @@ html, body {
 .g-heading-bio-container {
     margin-bottom: 20px;
     font-family: Arial, sans-serif;
+    color: rgb(81, 81, 81);
 }
 .g-heading-bio-author {
     font-size: 0.9rem;
     font-weight: 500;
 }
 .g-heading-bio-author a {
-    color: black !important;
+    color: rgb(81, 81, 81) !important;
 }
 .g-heading-bio-text, .g-heading-bio-date {
     font-size: 0.9rem;
@@ -242,7 +255,9 @@ a {
   .scrollytelling-image-full {
     width: 100%;
   }
-  
+
+
+
   .scrollytelling-image.active {
     opacity: 1;
     z-index: 1;
@@ -273,6 +288,17 @@ a {
     margin-bottom: 12.5px;
   }
   
+  @media (max-width: 600px) {
+    .scrollytelling-image {
+        width: 90%;
+    }
+    .scrollytelling-image-full {
+        width: 180%;
+    }
+    .scrollytelling-step p {
+        width: 90%;
+    }
+  }
   
   .article-content {
     padding: 4rem 2rem;
