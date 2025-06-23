@@ -1,6 +1,9 @@
 html, body {
     margin: 0;
 }
+button {
+    color: black !important;
+}
 .nav-container {
     position: fixed;
     display: flex;
@@ -285,7 +288,15 @@ a {
     line-height: 1.5;
     margin-bottom: 12.5px;
   }
-  @media (max-width: 600px) {
+
+.highlight {
+    background: white;
+    box-decoration-break: clone;
+    padding: 0.4rem 0.4rem;
+}
+
+
+@media (max-width: 600px) {
     .scrollytelling-image {
         width: 85%;
     }
@@ -296,14 +307,12 @@ a {
         width: 85%;
         font-size: 1.1rem;
     }
-  }
-  
+    .highlight {
+        padding: 0.3rem 0.3rem;
+    }
+}
+
   .article-content {
     padding: 4rem 2rem;
   }
   
-  .highlight {
-    background: white;
-    box-decoration-break: clone; /* helps preserve background across lines */
-    padding: 0.4rem 0.4em;
-  }
