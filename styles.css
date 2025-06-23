@@ -261,6 +261,7 @@ a {
 
   .scrollytelling-image-full {
     width: 100%;
+    max-height: 100vh;
   }
 
 
@@ -297,13 +298,14 @@ a {
   
   @media (max-width: 600px) {
     .scrollytelling-image {
-        width: 90%;
+        width: 85vw;
     }
     .scrollytelling-image-full {
-        width: 180%;
+        width: 100%;
     }
     .scrollytelling-step p {
-        width: 90%;
+        width: 85vw;
+        font-size: 1rem;
     }
   }
   
