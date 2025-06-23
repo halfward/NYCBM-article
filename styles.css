@@ -1,0 +1,285 @@
+html, body {
+    margin: 0;
+}
+.nav-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    right: 25px;
+    bottom: 50px;
+    gap: 5px;
+    z-index: 9999;
+}
+.nav-container button {
+    display: flex;
+    border-radius: 50%;
+    height: 50px;
+    aspect-ratio: 1;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: grey;
+    background-color: white;
+    border: 1px solid grey;
+}
+.nav-container button:hover {
+    background-color: rgb(235, 235, 235);
+}
+.nav-button-arrow {
+    width: 20px;
+    opacity: 50%;
+}
+
+.image-splash {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+.g-caption {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 25px;
+}
+.g-caption-text {
+    width: 600px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.75rem;
+    color: gray;
+}
+
+.g-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
+}
+.g-text {
+    width: 600px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: 12.5px;
+}
+.g-image {
+    width: 600px;
+    object-fit: contain;
+}
+.g-image-text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    position: absolute;
+}
+.g-wrapper {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+@media (max-width: 740px) {
+    .g-text {
+        max-width: 100%;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+}
+
+.g-heading {
+    margin-top: 40px;
+}
+.g-title {
+    font-family: 'Noto Serif', Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.375rem;
+    line-height: 1.2;
+    margin-bottom: 1.75rem;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    text-rendering: optimizeLegibility;
+}
+.g-heading-button-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid lightgray;
+}
+.g-heading-button-container a {
+    text-decoration: none;
+    color: black;
+}
+.g-heading-button {
+    font-size: 0.75rem;
+    font-family: Arial, sans-serif;
+    border-radius: 20px;
+    border: 1px solid lightgray;
+    padding: 8px 12px;
+    background-color: white;   
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+}
+.g-heading-button:hover {
+    background-color: lightgray;
+}
+.g-heading-button-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+.g-heading-bio-container {
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+}
+.g-heading-bio-author {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.g-heading-bio-author a {
+    color: black !important;
+}
+.g-heading-bio-text, .g-heading-bio-date {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.g-heading-line {
+    height: 1.5px;
+    background-color: black;
+    width: 125px;
+    margin-bottom: 25px;
+}
+
+.g-image-logo {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    width: 250px;
+    height: auto;
+    object-fit: contain;
+}
+.g-image-button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(2px);
+    border: none;
+    padding: 8px 12px;
+    font-size: 0.75rem;
+    font-family: Arial, sans-serif;
+    font-weight: 800;
+    color: black;
+}
+.g-image-button:hover {
+    cursor: pointer;
+}
+
+.footing {
+    font-size: 0.65rem;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: gray;
+    border-top: 1px lightgray solid;
+    padding-top: 10px;
+    padding-bottom: 75px;
+}
+
+h1, p {
+    margin: 0;
+}
+a {
+    color: #326891;
+    text-decoration-color: #a7b8c4;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+}
+
+#g-wrapper-splash:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+
+
+
+.scrollytelling-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .scrollytelling-image-wrapper {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+  }
+  
+  .scrollytelling-image {
+    position: absolute;
+    /* top: 0; */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+  }
+
+  .scrollytelling-image-full {
+    width: 100%;
+  }
+  
+  .scrollytelling-image.active {
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  
+  .scrollytelling-step {
+    padding: 50vh 2rem 50vh 2rem; /* Makes each step tall enough to scroll */
+    font-size: 1.2rem;
+    line-height: 1.6;
+    background: transparent;
+    z-index: 1;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .scrollytelling-step p {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 1rem;      
+    width: 600px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: 12.5px;
+  }
+  
+  
+  .article-content {
+    padding: 4rem 2rem;
+  }
+  
+  .highlight {
+    background: white;
+    box-decoration-break: clone; /* helps preserve background across lines */
+    padding: 0.4rem 0.4em;
+  }

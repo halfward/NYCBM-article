@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>A Visual Guide to New York City's Building Materials</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" href="images/logo-icon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="nav-container">
+        <button id="nav-up">
+            <img src="images/collapse.svg" alt="Collapse" class="nav-button-arrow" style="transform: rotate(180deg);">
+        </button>
+        <button id="nav-down">
+            <img src="images/collapse.svg" alt="Collapse" class="nav-button-arrow">
+        </button>
+    </div>
+
+    <img src="images/splash-small.png" alt="Splash Image" class="image-splash">
+
+    <div class="g-block">
+        <div class="g-caption">
+            <div class="g-caption-text">
+                All of New York City's building materials, estimated and visualized.
+            </div>
+        </div>
+    </div>
+
+    <div class="g-block">
+        <div class="g-text g-heading">
+            <div class="g-title">
+                A Visual Guide to New York City's Building Materials
+            </div>
+            <div class="g-heading-button-container">
+                <a href="https://www.nycbuildingmaterials.com/" class="g-heading-button">
+                    <img src="images/logo-icon.svg" alt="Visit Platform" class="g-heading-button-icon">
+                    Visit Platform
+                </a>
+                <button class="g-heading-button" id="copy-link-button">
+                    <img src="images/icon-link.png" alt="Copy Link" class="g-heading-button-icon" id="copy-link-icon">
+                    Copy Link
+                </button>
+                <a href="https://gsapp-cdp.github.io/archive/projects/2025/nyc-building-materials/" class="g-heading-button">
+                    CDP Archive
+                </a>
+            </div>
+            <div class="g-heading-bio-container">
+                <div class="g-heading-bio-author">
+                    <b>By <a href="https://halfward.github.io/haoLee/" style="text-decoration-color: gray; text-underline-offset: 2px;">Hao Lee</a></b>
+                </div>
+                <div class="g-heading-bio-text">
+                    Hao Lee is an architect and urban data analyst based in New York City.
+                </div>
+                <div class="g-heading-bio-text">
+                    This article is part of NYC Building Materials, an academic project developed in the Computational Design Practices program at Columbia University's Graduate School of Architecture, Planning and Preservation (GSAPP).
+                </div>
+                <div class="g-heading-bio-date">
+                    June 21, 2025
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="g-block">   
+        <div class="g-text">
+            How do we begin to see the materials that make our cities?
+        </div>
+        <div class="g-text">
+            Each building tells a story of material: what was used, where it came from, and what it displaced. Yet the scale of these materials is rarely visible to the public eye.
+        </div>
+        <div class="g-text">
+            When I was doing field research for my architectural undergrad thesis project in Taiwan, 2019, I focused on abandoned theater complexes in Taichung's old entertainment hub — The Central District. Most of them was built in the 50s and 60s and were demolished or abandoned in the 2000s, either during the Taiwan SARS pandemic or because of the popularity of modern malls.
+        </div>
+        <div class="g-text">
+            I ended up talking my way in an abandoned building by playing my student card with the security guard to get 30 minuts inside. I wandered the whole building, floor by floor, from the basement to the rooftop.
+        </div>
+
+        <div class="g-text">
+            It felt like I was slipping through layers of forgotten slices of life. The furniture was looted or trashed, fixtures torn out, and what remained were surfaces: tiles, textures, the bare bones of the hustle that once was. These were building materials that couldn't be salvaged.
+        </div>
+
+        <img src="images/taichung.png" alt="Legend" class="g-image">
+        <div class="g-caption">
+            <div class="g-caption-text">
+                The emptied-out (now demolished) theater complex.
+            </div>
+        </div>
+
+        <div class="g-text">
+            Now that the building has been demolished, taken apart and hauled away (in 2020, just one year after I graduated,) I feel an urge to tell a story. One about the identity of a city and how it’s shaped by its parts — its buildings. People come and go, interiors shift, and memories change, but the materials that linger hold a kind of silent presence. That deserves to be celebrated, and I knew, someday I'd have the opportunity to do so.
+        </div>
+    </div>
+
+    <div class="g-block">   
+        <div class="g-text">
+            Six years later, I’m in New York City — a metropolis shaped as much by construction as by demolition. And here, the question of how we celebrate building materials feels as expansive as the skyline itself.
+        </div>
+        <div class="g-text">
+            Thanks to the work of many talented individuals and civic teams, the city now boasts a growing number of public-facing tools: from city-led efforts like the <a href="https://www.nyc.gov/assets/buildings/html/dob-development-report.html">NYC Construction Dashboard</a> to independent projects like <a href="https://sidewalkwidths.nyc/#13/40.714/-74.005">Sidewalk Widths NYC</a> by <a href="https://meliharvey.com/">Meli Harvey</a> . That momentum got me thinking: perhaps I could build a visualization of my own while I’m here.
+        </div>
+        <div class="g-text">
+            Over the past two semesters of graduate study, I’ve been doing just that — leveraging open data and machine learning to estimate and visualize the building materials that make up New York City:
+        </div>
+    </div>
+
+    <div class="g-block">
+        <div class="g-wrapper" id="g-wrapper-splash" onclick="window.location.href='https://www.nycbuildingmaterials.com/'">
+            <img src="images/splash-small.png" alt="Data Structure" class="g-image" style="border-radius: 6px;">
+            <img src="images/logo-short.svg" alt="NYCBM Logo" class="g-image-logo">
+            <button class="g-image-button">
+                Explore the full interactive map »
+            </button>
+        </div>
+        <div class="g-text">
+            NYC Building Materials is a platform designed to change that. It offers a new way to explore the city through a material lens: a living, interactive map that visualizes the footprints of what we build and what we erase. By layering data, design, and curiosity, this project invites users to reintroduce themselves to the built environment.
+        </div>
+        <div class="g-text">
+            As of 2025, NYC Building Materials has collected and estimated the building materials of over 100,000 buildings in New York City.
+        </div>
+        <div class="g-text"></div><div class="g-text">
+            There are five different colors in the map, each representing a different material category: timber, glass, concrete, masonry, and steel. Each color dot represents a type of building material in a 100m x 100m (328ft x 328ft) hexagon area. When we overlay these five colors onto each other, patterns emerge and we can identify the why and how of the materials choices in New York City by comparing this visualization with other city maps. Overall, it shows a hidden world of the city's built environment that is not immediately apparent from other maps.
+        </div>
+    </div>
+
+    <div class="g-block">   
+        <div class="g-text">
+            Here's one pattern that got my attention immediately after rendering out the map:
+        </div>
+    </div>
+    <div class="scrollytelling-container">
+        <!-- Sticky image container with all images stacked -->
+        <div class="scrollytelling-image-wrapper">
+            <img class="scrollytelling-image scrollytelling-image-full active" data-image="crater-01.png" src="images/crater-01.png" alt="Image 1">
+            <img class="scrollytelling-image scrollytelling-image-full" data-image="crater-02.png" src="images/crater-02.png" alt="Image 2">
+            <img class="scrollytelling-image scrollytelling-image-full" data-image="crater-03.png" src="images/crater-03.png" alt="Image 3">
+            <img class="scrollytelling-image scrollytelling-image-full" data-image="crater-04.png" src="images/crater-04.png" alt="Image 4">
+        </div>
+
+        <div class="scrollytelling-step" data-image="crater-01.png">
+            <p>
+                <span class="highlight">
+                    Straddling the border of Queens and Brooklyn are neighborhoods like Maspeth, Blissville, and East Williamsburg; areas often overlooked in the city’s media and mapping narratives, their urban fabric less defined and more dispersed.
+                </span>
+            </p>
+        </div>
+        <div class="scrollytelling-step" data-image="crater-02.png">
+            <p>
+                <span class="highlight">
+                    But viewed through the lens of building materials, they emerge as something striking: a vast orange crater, set against a sea of blue, green, and purple.
+                </span>
+            </p>
+        </div>
+        <div class="scrollytelling-step" data-image="crater-03.png">
+            <p>
+                <span class="highlight">
+                    Filter out buildings taller than two stories, and the pattern sharpens. The crater reveals itself as a dense concentration of low-rise masonry and concrete structures.
+                </span>
+            </p>
+        </div>
+        <div class="scrollytelling-step" data-image="crater-04.png">
+            <p>
+                <span class="highlight">
+                    Exclude postwar buildings instead, and another insight comes into focus. Compared to much of New York City, this “crater” is not just an outlier in form, but in age: its buildings are, in fact, actually newer than those in many surrounding neighborhoods.
+                </span>
+            </p>
+        </div>
+    </div>
+
+    <div class="g-block">
+        <div class="g-text">
+            (a pic of the crater)
+        </div>
+        <img src="images/blissville.webp" alt="Blissville" class="g-image">
+        <div class="g-caption">
+            <div class="g-caption-text">
+                <a href="https://nyc.streetsblog.org/2022/04/18/eyes-on-the-street-welcome-to-blissville-queens"> Photo: Julianne Cuba, StreetsBlog NYC</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="g-block">
+        <div class="g-text">
+            While refining the data, I, as an relative NYC outsider, decided to take the liberty to classify and identify the different patterns of the map. Colors, the most visually distinct of the three pattern categories, mainly represent the overall cityscape of neighborhoods/regions. Should we see lots of green, it's probably a business district that contains a lot of glass. Comparatively, if we see purple-ish colors, it's a neighborhood with less gentrification (a well-mix of building material types/colors.)
+        </div>
+
+        <img src="images/legend.png" alt="Legend" class="g-image">
+        <div class="g-caption">
+            <div class="g-caption-text">
+                Some material patterns emerged from the data visualization.
+            </div>
+        </div>
+
+        <div class="g-text">
+            Similarly, cuts and clusters represent the city's more distinct development histories, such as transportation line and cultural enclaves.
+        </div>
+    </div>
+
+    
+
+
+    <div class="g-block">   
+        <div class="g-text">
+            Now for the technical part: how did I actually gather the material data?
+        </div>
+    </div>
+
+    <div class="g-block">
+        <img src="images/concept-diagram.png" alt="Concept Diagram" class="g-image">
+        <div class="g-caption">
+            <div class="g-caption-text">
+                NYC Building Material's data structure.
+            </div>
+        </div>
+        <div class="g-text">
+            Building Information Modeling, or BIM, is now a standard tool in architecture, allowing designers, builders, and clients to manage materials with precision. New York City also offers a rich trove of open-source resources through <a href="https://opendata.cityofnewyork.us/">NYC Open Data</a>, providing access to thousands of datasets across agencies and neighborhoods. But despite these tools, one thing was missing: data on building materials at the scale of the city itself.
+        </div>
+        <div class="g-text">
+            So I decided to make my own data.
+        </div>
+    </div>
+
+    <div class="scrollytelling-container">
+        <!-- Sticky image container with all images stacked -->
+        <div class="scrollytelling-image-wrapper">
+            <img class="scrollytelling-image active" data-image="data-structure-1.png" src="images/data-structure-1.png" alt="Image 1">
+            <img class="scrollytelling-image" data-image="data-structure-2.png" src="images/data-structure-2.png" alt="Image 2">
+            <img class="scrollytelling-image" data-image="data-structure-3.png" src="images/data-structure-3.png" alt="Image 3">
+        </div>
+
+        <div class="scrollytelling-step" data-image="data-structure-1.png">
+            <p>
+                <span class="highlight">
+                    The visualization's data takes MapPLUTO (each building's basic properties) as a basis and introduces RASMI
+                </span>
+            </p>
+        </div>
+        <div class="scrollytelling-step" data-image="data-structure-2.png">
+            <p>
+                <span class="highlight">
+                    Then, the data was processed into building material intensities (MI) for each hexagonal grid.
+                </span>
+            </p>
+        </div>
+        <div class="scrollytelling-step" data-image="data-structure-3.png">
+            <p>
+                <span class="highlight">
+                    Finally, external maps and data overlays are brought into the platform for context and comparison.
+                </span>
+            </p>
+        </div>
+    </div>
+
+
+
+    <div class="g-block">
+        <img src="images/layout-00.gif" alt="Layout" class="g-image">
+        <div class="g-caption">
+            <div class="g-caption-text">
+                Layout.
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="g-block">
+        <img src="images/demo-xray.gif" alt="Demo X-ray" class="g-image">
+        <div class="g-caption">
+            <div class="g-caption-text">
+                Demo X-ray in an earlier version of NYC Building Materials.
+            </div>
+        </div>
+    </div>
+
+    <div class="g-block">
+        <div class="g-text">
+            asdfgdagf 
+        </div>
+        <img src="images/markers.gif" alt="Markers" class="g-image">
+        <div class="g-caption">
+            <div class="g-caption-text">
+                Story markers, in the form of sourcing quotes from NYT articles.
+            </div>
+        </div>
+    </div>
+    
+    <div class="g-block">
+        <div class="g-text">
+            Can NYC Building Materials be applied to other cities? 
+        </div>
+        <div class="g-text">
+            In theory, yes.
+        </div>
+        <div class="g-text">
+            In practice, it takes more work. Each city has its own logic: shaped by data availability, planning history, and the ways people have built over time.
+        </div>
+        <div class="g-text">
+            First, there’s the data. To begin mapping a city’s material footprint, we need access to a comprehensive building dataset: basic details about each structure, from size to construction type. That’s the foundation.
+        </div>
+        <div class="g-text">
+            Then comes the knowledge: the local context, architectural patterns, and historical shifts that give meaning to the data. In New York City, for example, more than 90% of buildings are three stories or fewer—a fact that shaped how I defined the building categories and subcategories. But in a city like Taipei, where five-story walkups dominate (often with added rooftop structures), a different system of classification is needed. 
+        </div>
+        <div class="g-text">
+            But with today’s widespread use of GIS in government and city planning, this kind of data is more accessible than ever. That opens the door for scaling the project: adapting NYC Building Materials to other cities, each with its own patterns, materials, and histories. With the right data and local insight, this framework could travel borders.
+        </div>
+    </div>
+
+    <div class="g-block">
+        <div class="g-text g-heading">
+            <div class="g-heading-bio-container">
+                <div class="g-heading-line"></div>
+                <div class="g-heading-bio-author">
+                    <b>Methodology</b>
+                </div>
+                <br>
+                <div class="g-heading-bio-text">
+                    NYC Building Materials uses a combination of open data from NYC Open Data, in this case, <a href="https://www.nyc.gov/content/planning/pages/resources/datasets/mappluto-pluto-change">MapPLUTO</a> for buliding properties like height, number of stories, and building type; and <a href="https://www.nature.com/articles/s41597-024-03190-7">RASMI</a>, short for Regional Assessment of buildings’ Material Intensities, by Tomer Fisherman et al., for the material composition of buildings. These compositions include the building's structure, facade, and interior materials, but do not take furnitures and foundations/piles into account. 
+                </div>
+                <div class="g-heading-bio-text">
+                    I then used Python's scikit-learn library to cluster (in this case, k-prototype for a mixture of data types) the buildings into six major categories and several subcategories based on their properties, and then applied the RASMI data to each cluster to estimate the material composition of each building.
+                </div>
+                <br><br>
+                <div class="g-heading-line"></div>
+                <div class="g-heading-button-container" style="border: none;">
+                    <a href="https://www.nycbuildingmaterials.com/" class="g-heading-button">
+                        <img src="images/logo-icon.svg" alt="Visit Platform" class="g-heading-button-icon">
+                        Visit Platform
+                    </a>
+                    <button class="g-heading-button" id="copy-link-button">
+                        <img src="images/icon-link.png" alt="Copy Link" class="g-heading-button-icon" id="copy-link-icon">
+                        Copy Link
+                    </button>
+                    <a href="https://gsapp-cdp.github.io/archive/projects/2025/nyc-building-materials/" class="g-heading-button">
+                        CDP Archive
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footing">
+        2025 Hao Lee
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
