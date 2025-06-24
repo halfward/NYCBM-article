@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+    
 </head>
 <body>
     <div class="nav-container">
@@ -32,18 +33,21 @@
 
     <div class="g-block">
         <div class="g-text g-heading">
+            <img src="images/logo-long.svg" alt="NYC Building Materials" class="g-heading-logo">
             <div class="g-title">
                 A Visual Guide to New York City's Building Materials
             </div>
             <div class="g-heading-button-container">
                 <a href="https://www.nycbuildingmaterials.com/" class="g-heading-button">
-                    <img src="images/logo-icon.svg" alt="Visit Platform" class="g-heading-button-icon">
+                    <img src="images/icon-desktop.png" alt="Visit Platform" class="g-heading-button-icon">
                     Visit Platform
                 </a>
                 <button class="g-heading-button" id="copy-link-button">
                     <img src="images/icon-link.png" alt="Copy Link" class="g-heading-button-icon" id="copy-link-icon">
                     Copy Link
                 </button>
+                <div id="copy-message">Link copied!</div>
+
                 <a href="https://gsapp-cdp.github.io/archive/projects/2025/nyc-building-materials/" class="g-heading-button">
                     CDP Archive
                 </a>
@@ -199,15 +203,50 @@
             After experiencing the rush of watching a data story slowly take shape, I did what any curious outsider to New York might do: I took some liberties. I began classifying and interpreting patterns in the map.
         </div>
         <div class="g-text">
-            Color, the most immediate visual cue, quickly revealed regional characteristics across the city. Dense clusters of green often point to business districts dominated by glass façades. In contrast, areas shaded in purples tend to show neighborhoods that have undergone less gentrification: places where a more eclectic mix of materials, and therefore colors, signal older and less commercially homogenized (lots of glass/green) development.
+            Color, the most immediate visual cue, quickly revealed regional characteristics across the city.
         </div>
-
-        <!-- <img src="images/legend.png" alt="Legend" class="g-image">
-        <div class="g-caption">
-            <div class="g-caption-text">
-                Some material patterns emerged from the data visualization.
+        <div class="g-text">
+            For starters, dense clusters of green often point to business districts dominated by glass façades:
+        </div>
+        <div class="g-image-container">
+            <img src="images/patterns-01.png" alt="Midtown" class="g-image">
+            <div class="g-image-text" style="top: 20%; left: 55%;">
+                Midtown
             </div>
-        </div> -->
+            <div class="g-image-text" style="top: 60%; left: 25%;">
+                Chelsea
+            </div>
+        </div>
+        <div class="g-text">
+            In contrast, areas shaded in purples tend to show neighborhoods that have undergone less gentrification: places where a more eclectic mix of materials, and therefore colors, signal older and less commercially homogenized (lots of glass/green) development.
+        </div>
+        <div class="g-image-container">
+            <img src="images/patterns-02.png" alt="Midtown" class="g-image">
+            <div class="g-image-text" style="top: 40%; left: 60%;">
+                Corona
+            </div>
+            <div class="g-image-text" style="top: 30%; left: 8%;">
+                Jackson Heights
+            </div>
+            <div class="g-image-text" style="top: 65%; left: 20%;">
+                Elmhurst
+            </div>
+        </div>
+        <div class="g-text">
+            In areas with industrial roots, the map shifts to hues of yellow, orange, and purple — warehouses and brick buildings dominating the landscape. Blue, representing timber, is often absent from these interiors, revealing a material pattern shaped by durability and scale instead of softness or domesticity.
+        </div>
+        <div class="g-image-container">
+            <img src="images/patterns-03.png" alt="Midtown" class="g-image">
+            <div class="g-image-text" style="top: 55%; left: 40%;">
+                Gowanus
+            </div>
+            <div class="g-image-text" style="top: 50%; left: 8%;">
+                Red Hook
+            </div>
+            <div class="g-image-text" style="top: 65%; left: 70%;">
+                Park Slope
+            </div>
+        </div>
 
         <div class="g-chapter-title g-text">
             Cuts
@@ -219,6 +258,42 @@
         <div class="g-text">
             Like strokes of watercolor brushed across the city, these patterns often trace the paths of highways or the LIRR (looking at you, <a href="https://www.segregationbydesign.com/the-bronx/the-cross-bronx-expressway">Robert Moses</a>.) Others reveal clusters of development hugging arterial roads or unfurling along subway lines.
         </div>
+        <div class="g-text">
+            While the BQE slices cleanly through the city’s patchwork of materials, other corridors are tinged with orange, a signal of dense brick construction and fewer residential units, often lining noisier, more industrial fabrics.
+        </div>
+        <div class="g-image-container">
+            <img src="images/patterns-04.png" alt="Midtown" class="g-image">
+            <div class="g-image-text" style="top: 16%; left: 50%;">
+                Sunset<br>Park
+            </div>
+            <div class="g-image-text" style="top: 50%; left: 8%;">
+                Bay Ridge
+            </div>
+            <div class="g-image-text" style="top: 70%; left: 50%;">
+                Dyker<br>Heights
+            </div>
+        </div>
+        <div class="g-text">
+            In other cases, roads act less as dividers and more as magnets — drawing developers and businesses to cluster along their edges, shaping corridors of concentrated growth.
+        </div>
+        <div class="g-image-container">
+            <img src="images/patterns-05.png" alt="Midtown" class="g-image">
+            <div class="g-image-text" style="top: 80%; left: 35%;">
+                Forest Hills<br>Gardens
+            </div>
+        </div>
+        <div class="g-text">
+            In the city’s lower-density pockets, ribbons of purple or orange often slice through a sea of blue, marking the presence of public or commercial buildings set against a backdrop of timber-framed residential structures.
+        </div>
+        <div class="g-image-container">
+            <img src="images/patterns-06.png" alt="Midtown" class="g-image">
+            <div class="g-image-text" style="top: 30%; left: 10%;">
+                Richmond Hill
+            </div>
+            <div class="g-image-text" style="top: 70%; left: 60%;">
+                South<br>Richmond Hill
+            </div>
+        </div>
 
         <div class="g-chapter-title g-text">
             Clusters
@@ -228,7 +303,52 @@
             <div class="g-chapter-line"></div>
         </div>
         <div class="g-text">
-            stringed jewels along an invisible line.
+            On the map, you can also spot clusters of color that look like strings of beads along unseen paths. These are often NYCHA buildings or gated communities with highly uniform building materials, often established along subway lines or major roads.
+        </div>
+        <div class="g-text">
+            As of June 2025, the dataset doesn’t yet distinguish between public and private ownership, so some colors may be less accurate. Still, it offers another way to see how and where building materials are concentrated across the city.
+        </div>
+        <div class="g-image-container">
+            <img src="images/patterns-07.png" alt="Midtown" class="g-image">
+            <div class="g-image-text" style="top: 60%; left: 20%;">
+                Fresh<br>Meadows
+            </div>
+            <div class="g-image-text" style="top: 55%; left: 70%;">
+                Oakland<br>Gardens
+            </div>
+        </div>
+        <div class="g-text">
+            In areas with more organic growth, like Flushing, material clusters tend to have softer, less defined edges.
+        </div>
+        <div class="g-text">
+            These formations often show marine-colored cores surrounded by orange perimeters, suggesting denser residential towers or newer developments at the center, wrapped by older, lower-rise structures on the outskirts.
+        </div>
+        <div class="g-image-container">
+            <img src="images/patterns-08.png" alt="Midtown" class="g-image">
+            <div class="g-image-text" style="top: 65%; left: 40%;">
+                Downtown<br>Flushing
+            </div>
+            <div class="g-image-text" style="top: 65%; left: 75%;">
+                Murray<br>Hill
+            </div>
+            <div class="g-image-text" style="top: 10%; left: 75%;">
+                Linden<br>Hill
+            </div>
+        </div>
+        <div class="g-image-container">
+            <div class="g-text">
+                Among the most striking and rare patterns are what could be called “anti-clusters”: areas that register significantly lower material intensity than their surroundings. 
+            </div>
+            <div class="g-text">
+                These pockets, like Fieldston in the Bronx or Sea Gate in Brooklyn, often reflect neighborhoods where building typologies are tightly regulated, resulting in uniform, low-density developments that visually stand apart from the fabric around them.
+            </div>
+            <img src="images/patterns-09.png" alt="Midtown" class="g-image">
+            <div class="g-image-text" style="top: 45%; left: 42%;">
+                Fieldston
+            </div>
+            <div class="g-image-text" style="top: 50%; left: 15%;">
+                Riverdale<br>Park
+            </div>
         </div>
     </div>
 
@@ -252,26 +372,26 @@
 
     <div class="scrollytelling-container">
         <div class="scrollytelling-image-wrapper">
-            <img class="scrollytelling-image scrollytelling-image-full active g-image" data-image="platform-hover.gif" src="images/platform-hover.gif" alt="Image 1">
-            <img class="scrollytelling-image scrollytelling-image-full" data-image="platform-filter.gif" src="images/platform-filter.gif" alt="Image 2">
-            <img class="scrollytelling-image scrollytelling-image-full" data-image="platform-mask.gif" src="images/platform-mask.gif" alt="Image 3">
+            <img class="scrollytelling-image scrollytelling-image-full active g-image" data-image="hover-square.gif" src="images/hover-square.gif" alt="Image 1">
+            <img class="scrollytelling-image scrollytelling-image-full" data-image="filter-square.gif" src="images/filter-square.gif" alt="Image 2">
+            <img class="scrollytelling-image scrollytelling-image-full" data-image="mask-square.gif" src="images/mask-square.gif" alt="Image 3">
         </div>
 
-        <div class="scrollytelling-step" data-image="platform-hover.gif">
+        <div class="scrollytelling-step" data-image="hover-square.gif">
             <p>
                 <span class="highlight">
                     A dynamic hover feature allowing you to explore each tile’s material composition and urban characteristics, updating in real time as the cursor moves across the map.
                 </span>
             </p>
         </div>
-        <div class="scrollytelling-step" data-image="platform-filter.gif">
+        <div class="scrollytelling-step" data-image="filter-square.gif">
             <p>
                 <span class="highlight">
                     A simple filtering tool to sort buildings by height, year of construction, and the embodied carbon values of their materials.
                 </span>
             </p>
         </div>
-        <div class="scrollytelling-step" data-image="platform-mask.gif">
+        <div class="scrollytelling-step" data-image="mask-square.gif">
             <p>
                 <span class="highlight">
                     And an “X-ray” feature to overlay the material map with satellite imagery, transit networks, zoning boundaries, and more.
@@ -295,6 +415,61 @@
         </div>
     </div>
 
+    <div class="g-block">
+        <div class="g-chapter-title g-text">
+            Embodied Carbon
+            <div class="g-chapter-subtitle">
+                and where to find them
+            </div>
+            <div class="g-chapter-line"></div>
+        </div>
+        <div class="g-text">
+            Few topics command more attention in architecture and planning today than sustainability, and at the heart of that conversation is embodied carbon. In my final semester at Columbia GSAPP, under the guidance of David Benjamin, I added an embodied carbon layer to this platform, aiming to visualize not just how much material is used in our buildings, but what kind of impact it carries.
+        </div>
+        <div class="g-text">
+            Visually, this layer shifts the story from simply how much material is used to what kind of impact it has, and how that varies across neighborhoods.
+        </div>
+        <div class="g-text"> 
+            I also introduced a “carbon per person” mode, which divides each hexagon’s embodied carbon by the number of residents and workers within it. To explore whether central business districts (CBDs) are truly wasteful on a material level, or whether they may, in fact, be more efficient per capita than we assume. The goal here is to open up new ways of thinking about urban efficiency, equity, and embodied carbon as a shared metric.
+        </div>
+        <img src="images/filter-comparison.png" alt="Filter comparison" class="g-image">
+        <div class="g-caption">
+            <div class="g-caption-text">
+                Material weights, embodied carbon, and embodied carbon per person.
+            </div>
+        </div>
+        <div class="g-text">
+            One of the more striking insights comes from the carbon-per-person view. One big example is Midtown. We often associate CBDs with wasteful building materials, but if we take the residents and workers into account, the areas all but disappear in the visualization, and instead other less material-intensive neighborhoods pop up: 
+        </div>
+        <div class="g-image-container">
+            <img src="images/filter-comparison-2.png" alt="Filter comparison" class="g-image">
+            <div class="g-image-text" style="top: 10%; left: 58%;">
+                Long Island City
+            </div>
+            <div class="g-image-text" style="top: 10%; left: 20%;">
+                Midtown
+            </div>
+            <div class="g-image-text" style="top: 42%; left: 58%;">
+                Long Island City
+            </div>
+            <div class="g-image-text" style="top: 42%; left: 20%;">
+                Midtown
+            </div>
+            <div class="g-caption">
+                <div class="g-caption-text">
+                    Embodied carbon (top) and embodied carbon per person (bottom).
+                </div>
+            </div>
+            <div class="g-text">
+                Because of the dense concentration of both workers and residents, their embodied carbon impact is effectively shared more broadly. 
+            </div>
+            <div class="g-text">
+                In contrast, lower-density neighborhoods show much higher carbon-per-capita values, raising questions about what we consider “efficient” or “wasteful” from a planning perspective.
+            </div>
+        </div>
+        
+        
+    </div>
 
 
     <div class="g-block">
@@ -366,13 +541,13 @@
             In theory, I'd do it in a heartbeat. In practice, it takes more work. Each city has its own logic: shaped by data availability, planning history, and the ways people have built over time.
         </div>
         <div class="g-text">
-            First, there’s the data. To begin mapping a city’s material footprint, we need access to a comprehensive building dataset: basic details about each structure, from size to construction type. That’s the foundation.
+            It starts with data. To begin mapping a city’s material footprint, we need access to a comprehensive building dataset: basic details about each structure, from size to construction type. That’s the foundation.
         </div>
         <div class="g-text">
-            Then comes the knowledge: the local context, architectural patterns, and historical shifts that give meaning to the data. In New York City, for example, more than 90% of buildings are three stories or fewer—a fact that shaped how I defined the building categories and subcategories. But in a city like Taipei, where five-story walkups dominate (often with added rooftop structures), a different system of classification is needed. 
+            Then comes context. Understanding local patterns, architectural typologies, and historical shifts gives meaning to the data. In New York City, for instance, over 90 percent of buildings are three stories or fewer. That fact shaped how I categorized the buildings and materials. But in a city like Taipei, where five-story walkups dominate (often with added rooftop structures), a different system of classification is needed. 
         </div>
         <div class="g-text">
-            But with today’s widespread use of GIS in government and city planning, this kind of data is more accessible than ever. That opens the door for scaling the project: adapting NYC Building Materials to other cities, each with its own patterns, materials, and histories. With the right data and local insight, this framework could travel borders.
+            Still, the rise of GIS in government and planning means more cities are making this kind of data available. That opens the door for scaling the project: adapting NYC Building Materials to new geographies, each with its own layers of material history. With the right datasets and local insight, this framework could travel.
         </div>
     </div>
 
@@ -394,7 +569,7 @@
                 <div class="g-heading-line"></div>
                 <div class="g-heading-button-container" style="border: none;">
                     <a href="https://www.nycbuildingmaterials.com/" class="g-heading-button">
-                        <img src="images/logo-icon.svg" alt="Visit Platform" class="g-heading-button-icon">
+                        <img src="images/icon-desktop.png" alt="Visit Platform" class="g-heading-button-icon">
                         Visit Platform
                     </a>
                     <button class="g-heading-button" id="copy-link-button">

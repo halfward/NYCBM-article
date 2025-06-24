@@ -65,3 +65,21 @@ document.querySelectorAll('.scrollytelling-container').forEach(container => {
 
   steps.forEach(step => observer.observe(step));
 });
+
+
+
+// Copy Link
+window.addEventListener('DOMContentLoaded', () => {
+  const button = document.getElementById("copy-link-button");
+  const msg = document.getElementById("copy-message");
+
+  button.addEventListener("click", () => {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      msg.style.opacity = 1;
+
+      setTimeout(() => {
+        msg.style.opacity = 0;
+      }, 2000);
+    });
+  });
+});
