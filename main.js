@@ -9,7 +9,18 @@ document.getElementById('copy-link-button').addEventListener('click', function (
     });
   });
 
+// Preload all scrollytelling images on load
+window.addEventListener('DOMContentLoaded', () => {
+  const imageElements = document.querySelectorAll('.scrollytelling-image');
 
+  imageElements.forEach(imgEl => {
+    const src = imgEl.getAttribute('src');
+    if (src) {
+      const img = new Image();
+      img.src = src;
+    }
+  });
+});
   
 // Button scroll logic
 function scrollToImage(direction) {

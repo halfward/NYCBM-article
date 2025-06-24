@@ -159,6 +159,9 @@ button {
         /* padding: 0 30px; */
         object-fit: contain;
     }
+    .g-image-text {
+        font-size: 0.8rem;
+    }
     .image-splash {
         height: 400px;
     }
