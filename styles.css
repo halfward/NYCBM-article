@@ -161,6 +161,7 @@ button {
     }
     .g-image-text {
         font-size: 0.8rem;
+        font-weight: 600;
     }
     .image-splash {
         height: 400px;
@@ -173,6 +174,9 @@ button {
     }
     .g-caption-text {
         font-size: 0.6rem;
+    }
+    .g-chapter-subtitle {
+        font-size: 0.9rem;
     }
 }
 
@@ -234,9 +238,9 @@ button {
 
 .g-image-logo {
     position: absolute;
-    top: 30px;
-    left: 20px;
-    width: 250px;
+    top: 6%;
+    left: 6%;
+    width: 40%;
     height: auto;
     object-fit: contain;
 }

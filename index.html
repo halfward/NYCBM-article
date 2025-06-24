@@ -563,6 +563,18 @@
                 <div class="g-heading-bio-text">
                     I then used Python's scikit-learn library to cluster (in this case, k-prototype for a mixture of data types) the buildings into six major categories and several subcategories based on their properties, and then applied the RASMI data (all median values) to each cluster to estimate the material composition of each building.
                 </div>
+                <div class="g-heading-bio-text">
+                    Data sources and method for carbon data:
+                    <br>
+                    Material weights (M) are estimated (using ML) from typology, zoning data, and the <a href="https://zenodo.org/records/10124952">RASMI dataset</a>; Embodied carbon values (C) are drawn from the <a href="https://carbonleadershipforum.org/clf-material-baselines-2023/">2023 CLF North American Material Baselines report</a>; Worker estimates (W) are derived from <a href="https://data.cityofnewyork.us/Environment/NYC-Building-Energy-and-Water-Data-Disclosure-for-/5zyy-y8am/about_data">NYC Building Energy and Water Disclosure (Local Law 84, 2022–24)</a>, capturing registered uses like offices, restaurants, hospitals, etc.; and resident counts (P) come from the most recent <a href="https://data2.nhgis.org/">NYC Census data</a>.
+                </div>
+                <div class="g-heading-bio-text">
+                    Using that:
+                    <br>
+                    Total embodied carbon per tile is C × M
+                    <br>
+                    Carbon per person is (C × M) ÷ (W + P)
+                </div>
                 <br><br>
                 <div class="g-heading-line"></div>
                 <div class="g-heading-button-container" style="border: none;">
